@@ -1,2 +1,5 @@
 *
 !.gitignore
+!/NESMaker/NESmaker_4_5_x/Projects
+!/NESMaker/NESmaker_4_5_x/GraphicAssets
+!/NESMaker/NESmaker_4_5_x/GameEngineData/Routines
