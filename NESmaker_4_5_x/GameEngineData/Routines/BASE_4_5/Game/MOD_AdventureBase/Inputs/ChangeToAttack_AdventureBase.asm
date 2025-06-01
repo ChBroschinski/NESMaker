@@ -13,13 +13,33 @@
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    ;END UNLOCKABLE WEAPONS
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   
+   ;If the sword object is on-screen we can't move NEW CODE
+    CountObjectType #1 ;;; Sword object
+    BEQ +
+        RTS
+    + 
+   
     TXA
     STA temp ;; assumes the object that we want is in x.
+    
+    GetActionStep temp
+    CMP #$02 ;attack
+    BNE +notAttacking
+        RTS
+    +notAttacking
+    CMP #$07
+    BNE +notHurt
+        RTS
+    +notHurt
 
     ChangeActionStep temp, #$02 ;; assumes that "attack" is in action 2
     ;arg0 = what object?
     ;arg1 = what behavior?
     StopMoving temp, #$FF, #$00
+    
+    ;;play sfx
+    PlaySound #sfx_slash
     
     ;;; some constants for where to create the sword.
     ;;; Constants do not take up any memory.

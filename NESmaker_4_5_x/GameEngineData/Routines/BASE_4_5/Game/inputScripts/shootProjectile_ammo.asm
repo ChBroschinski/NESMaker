@@ -9,6 +9,7 @@
     ;; there is ammo here.
     DEC myAmmo
     UpdateHudElement #$03 ;; change this to which element shows myAmmo.
+    PlaySound #sfx_laser
     TXA
     PHA
     TYA
