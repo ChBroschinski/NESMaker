@@ -4,6 +4,8 @@ NESmaker_4_5_x/*
 !/NESmaker_4_5_x/Projects/
 # Needs to also include FILES in those folders...
 !/NESmaker_4_5_x/Projects/**
+# Try unignore all subfolders as well...
+!/NESmaker_4_5_x/Projects/*
 !/NESmaker_4_5_x/GraphicAssets/
 !/NESmaker_4_5_x/GraphicAssets/**
 !/NESmaker_4_5_x/GameEngineData/Routines/
