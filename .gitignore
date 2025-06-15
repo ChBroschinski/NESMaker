@@ -1,5 +1,10 @@
-*/
-!.gitignore
+# Ignore everything in main folder
+NESmaker_4_5_x/*
+# Exclude those needed from the gitignore
 !/NESmaker_4_5_x/Projects/
+# Needs to also include FILES in those folders...
+!/NESmaker_4_5_x/Projects/**
 !/NESmaker_4_5_x/GraphicAssets/
+!/NESmaker_4_5_x/GraphicAssets/**
 !/NESmaker_4_5_x/GameEngineData/Routines/
+!/NESmaker_4_5_x/GameEngineData/Routines/**
