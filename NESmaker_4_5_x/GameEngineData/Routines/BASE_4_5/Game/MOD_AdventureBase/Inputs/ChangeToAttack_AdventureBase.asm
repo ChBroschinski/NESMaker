@@ -44,18 +44,18 @@
     ;;; some constants for where to create the sword.
     ;;; Constants do not take up any memory.
         WEAPON_POSITION_RIGHT_X = #$10
-        WEAPON_POSITION_RIGHT_Y = #$00
+        WEAPON_POSITION_RIGHT_Y = #$03
         WEAPON_POSITION_UP_X = #$00
         WEAPON_POSITION_UP_Y = #$F0
         WEAPON_POSITION_DOWN_X = #$00
         WEAPON_POSITION_DOWN_Y = #$10
         WEAPON_POSITION_LEFT_X = #$F0
-        WEAPON_POSITION_LEFT_Y = #$00
+        WEAPON_POSITION_LEFT_Y = #$03
         WEAPON_OBJECT = #$03
-        WEAPON_RIGHT_STATE = #$00
+        WEAPON_RIGHT_STATE = #$02
         WEAPON_LEFT_STATE = #$00
         WEAPON_UP_STATE = #$01
-        WEAPON_DOWN_STATE = #$01
+        WEAPON_DOWN_STATE = #$03
         
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         ;; Now, we have to create the object.

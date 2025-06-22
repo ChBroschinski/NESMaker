@@ -257,14 +257,24 @@
             JSR getOtherColBox
             JSR doCompareBoundingBoxes
             BEQ +skipCollision
-                TXA
-                STA otherObject
                 ;; There was a collision between a NPC and an NPC.
                 ;; NPC1 is self.
                 ;; NPC2 is other.
                 ;;change action to stop from npcs, assumes stop is action 1
-                ChangeActionStep otherObject, #$01
+                ;;ChangeActionStep otherObject, #$01
+                ;;ChangeActionStep selfObject, #$01
+                ;; check direction of collision then reverse direction
+                TXA
+                STA selfObject
                 ChangeActionStep selfObject, #$01
+                ReverseFacingDirection
+                ChangeActionStep selfObject, #$00
+                TXA
+                STA otherObject
+                ChangeActionStep otherObject, #$01
+                ReverseFacingDirection
+                ChangeActionStep otherObject, #$00
+                
             +isNotNPCNPCCol
             +skipCollision
             
