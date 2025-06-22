@@ -19,9 +19,14 @@
     BNE +notHurt
         RTS
     +notHurt
-        StartMoving temp, #DOWN
-        TXA
-        STA temp ;; assumes the object we want to move is in x.
-        ChangeFacingDirection temp, #FACE_DOWN
+    CMP #$01 ;moving
+    BEQ +movePlayer
+        ChangeActionStep temp, #$01 ;Walking
+    +movePlayer
+    StartMoving temp, #DOWN
+    TXA
+    STA temp ;; assumes the object we want to move is in x.
+    ChangeFacingDirection temp, #FACE_DOWN
+ 
 
     RTS

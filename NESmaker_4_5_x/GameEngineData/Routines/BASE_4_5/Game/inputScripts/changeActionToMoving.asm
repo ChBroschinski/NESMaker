@@ -21,6 +21,7 @@
     BNE +notHurt
         RTS
     +notHurt
+        ChangeFacingDirection temp, #FACE_UP
         ChangeActionStep temp, #$01 ;; assumes that "walk" is in action 1
             ;arg0 = what object?
             ;arg1 = what behavior?
